@@ -10,10 +10,11 @@ import UIKit
 
 class DBDirectiveViewController: UIViewController {
 
-    @IBOutlet var questionLabel: UILabel?
-    @IBOutlet var usersAgeLabel: UILabel?
-    @IBOutlet var birthdayDatePicker: UIDatePicker?
-        
+    @IBOutlet var questionLabel: UILabel!
+    @IBOutlet var usersAgeLabel: UILabel!
+    @IBOutlet var birthdayDatePicker: UIDatePicker!
+    var age: Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,6 +24,10 @@ class DBDirectiveViewController: UIViewController {
         showQuestionLabel()
 //        showCard()
         showUsersAgeLabel()
+        showDatePicker()
+        
+        
+      
         
         
         // Do any additional setup after loading the view.
@@ -55,8 +60,9 @@ class DBDirectiveViewController: UIViewController {
     
     func showUsersAgeLabel() {
         
-        var foo: Int = 16
-        usersAgeLabel?.text = String(format: "I am \(foo) years old")
+        var dateFromTimeInterval = NSDate(timeIntervalSinceReferenceDate: birthdayDatePicker.date)
+        age = NSDate.dateByAddingTimeInterval(dateFromTimeInterval)
+        usersAgeLabel?.text = String(format: "I am \(age) years old")
         usersAgeLabel?.textAlignment = .Center
         usersAgeLabel?.textColor = .whiteColor()
         usersAgeLabel?.font = UIFont(name: "Avenir-Medium", size: 14)
@@ -66,7 +72,14 @@ class DBDirectiveViewController: UIViewController {
         
         birthdayDatePicker?.datePickerMode = .Date
         birthdayDatePicker?.tintColor = .whiteColor()
-        birthdayDatePicker?
+        birthdayDatePicker?.addTarget(self, action: Selector("activateDatePicker"), forControlEvents: UIControlEvents.ValueChanged)
+    }
+    
+    func activateDatePicker() {
+        
+        var dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "MM dd YYYY"
+        println(dateFormatter.stringFromDate(birthdayDatePicker.date))
         
     }
     
