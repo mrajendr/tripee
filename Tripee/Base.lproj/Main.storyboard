@@ -21,6 +21,9 @@
                                 <state key="normal" title="Button" image="continue-button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="uz4-gF-Ani" kind="show" id="eca-pP-QcT"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="age-rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="boQ-Cy-NnP">
                                 <rect key="frame" x="27" y="220" width="322" height="222"/>
@@ -45,8 +48,8 @@
                                 <date key="minimumDate" timeIntervalSinceReferenceDate="-2240571600">
                                     <!--1930-01-01 11:00:00 +0000-->
                                 </date>
-                                <date key="maximumDate" timeIntervalSinceReferenceDate="157719600">
-                                    <!--2005-12-31 11:00:00 +0000-->
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="473252400">
+                                    <!--2015-12-31 11:00:00 +0000-->
                                 </date>
                             </datePicker>
                         </subviews>
@@ -55,6 +58,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="birthdayDatePicker" destination="Yey-52-FH6" id="Oba-KY-Tol"/>
+                        <outlet property="continueButton" destination="ot9-eI-Rjm" id="GED-Jy-8Yc"/>
                         <outlet property="questionLabel" destination="dKr-Qb-DFV" id="quz-n6-l52"/>
                         <outlet property="usersAgeLabel" destination="93G-yj-qCv" id="nRZ-se-5Di"/>
                     </connections>
@@ -63,9 +67,72 @@
             </objects>
             <point key="canvasLocation" x="569.5" y="414.5"/>
         </scene>
+        <!--Recipes View Controller-->
+        <scene sceneID="use-CY-V9n">
+            <objects>
+                <viewController id="uz4-gF-Ani" customClass="DBRecipesViewController" customModule="Tripee" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sEb-qV-LHm"/>
+                        <viewControllerLayoutGuide type="bottom" id="VWz-h1-12m"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jzT-dz-7T5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lead-background" translatesAutoresizingMaskIntoConstraints="NO" id="MuJ-z2-62W">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="134"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQc-JE-0iZ">
+                                <rect key="frame" x="74" y="32" width="227" height="70"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SNi-Cu-zmD">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <state key="normal" image="curate-recipe">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l1n-eS-9Pd">
+                                <rect key="frame" x="0.0" y="130" width="375" height="48.5"/>
+                                <state key="normal" image="change-location">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I'M IN" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNL-FH-yES">
+                                <rect key="frame" x="38" y="240" width="46" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WITH MY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSF-s2-j2j">
+                                <rect key="frame" x="38" y="364" width="74" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&amp; FEELING LIKE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEh-N1-oxu">
+                                <rect key="frame" x="38" y="493" width="127" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.062745098039215685" green="0.039215686274509803" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v88-Gl-h9r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1135.5" y="414.5"/>
+        </scene>
     </scenes>
     <resources>
         <image name="age-rectangle" width="643" height="444"/>
+        <image name="change-location" width="750" height="119"/>
         <image name="continue-button" width="750" height="102"/>
+        <image name="curate-recipe" width="750" height="102"/>
+        <image name="lead-background" width="750" height="268"/>
     </resources>
 </document>
