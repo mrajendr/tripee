@@ -10,14 +10,20 @@ import UIKit
 
 class DBRecipesViewController: UIViewController {
 
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBarHidden = true
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = UIColor(red: 0.086, green: 0.047, blue: 0.050, alpha: 1)
+        self.navigationController?.navigationBarHidden = true
         
         // Do any additional setup after loading the view.
-        
-        
         
     }
     

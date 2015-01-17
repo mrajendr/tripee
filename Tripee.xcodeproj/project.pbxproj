@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A5D46D861A6A7B7800AC23C1 /* DBRecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D46D851A6A7B7800AC23C1 /* DBRecipesViewController.swift */; };
+		A5D46D891A6AE40700AC23C1 /* DBLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D46D881A6AE40700AC23C1 /* DBLocationViewController.swift */; };
+		A5D46D8B1A6AEEE200AC23C1 /* DBSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D46D8A1A6AEEE200AC23C1 /* DBSearchViewController.swift */; };
 		A5E48E711A6A145100F09863 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E48E701A6A145100F09863 /* AppDelegate.swift */; };
 		A5E48E741A6A145100F09863 /* Tripee.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A5E48E721A6A145100F09863 /* Tripee.xcdatamodeld */; };
 		A5E48E761A6A145100F09863 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E48E751A6A145100F09863 /* RootViewController.swift */; };
@@ -32,6 +34,8 @@
 
 /* Begin PBXFileReference section */
 		A5D46D851A6A7B7800AC23C1 /* DBRecipesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBRecipesViewController.swift; sourceTree = "<group>"; };
+		A5D46D881A6AE40700AC23C1 /* DBLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBLocationViewController.swift; sourceTree = "<group>"; };
+		A5D46D8A1A6AEEE200AC23C1 /* DBSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBSearchViewController.swift; sourceTree = "<group>"; };
 		A5E48E6B1A6A145100F09863 /* Tripee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tripee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5E48E6F1A6A145100F09863 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5E48E701A6A145100F09863 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +70,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A5D46D871A6AE3F300AC23C1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A5D46D881A6AE40700AC23C1 /* DBLocationViewController.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		A5E48E621A6A145100F09863 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +102,7 @@
 				A5E48E701A6A145100F09863 /* AppDelegate.swift */,
 				A5E48E751A6A145100F09863 /* RootViewController.swift */,
 				DCF323371A6A210D0069DF2E /* TripeeAPIUtilities.swift */,
+				A5D46D871A6AE3F300AC23C1 /* Model */,
 				A5E48E961A6A48F200F09863 /* Views */,
 				A5E48E931A6A432900F09863 /* Controllers */,
 				A5E48E771A6A145100F09863 /* Main.storyboard */,
@@ -129,6 +142,7 @@
 		A5E48E931A6A432900F09863 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A5D46D8A1A6AEEE200AC23C1 /* DBSearchViewController.swift */,
 				A5E48E941A6A433800F09863 /* DBDirectiveViewController.swift */,
 				A5D46D851A6A7B7800AC23C1 /* DBRecipesViewController.swift */,
 			);
@@ -192,6 +206,7 @@
 				TargetAttributes = {
 					A5E48E6A1A6A145100F09863 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 7NE79LP6VD;
 					};
 					A5E48E821A6A145100F09863 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -246,10 +261,12 @@
 				A5E48E981A6A490F00F09863 /* DBDirectiveView.swift in Sources */,
 				A5D46D861A6A7B7800AC23C1 /* DBRecipesViewController.swift in Sources */,
 				A5E48E761A6A145100F09863 /* RootViewController.swift in Sources */,
+				A5D46D8B1A6AEEE200AC23C1 /* DBSearchViewController.swift in Sources */,
 				A5E48E741A6A145100F09863 /* Tripee.xcdatamodeld in Sources */,
 				DCF323381A6A210D0069DF2E /* TripeeAPIUtilities.swift in Sources */,
 				A5E48E711A6A145100F09863 /* AppDelegate.swift in Sources */,
 				A5E48E951A6A433800F09863 /* DBDirectiveViewController.swift in Sources */,
+				A5D46D891A6AE40700AC23C1 /* DBLocationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,9 +389,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Tripee/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -382,9 +402,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Tripee/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

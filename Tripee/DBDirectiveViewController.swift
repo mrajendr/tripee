@@ -19,7 +19,7 @@ class DBDirectiveViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor(red: 0.062, green: 0.619, blue: 0.341, alpha: 1)
-        
+        self.navigationController?.navigationBarHidden = true
         
         questionLabel?.numberOfLines = 2
         questionLabel?.text = "HOW OLD\nARE YOU?"
@@ -28,7 +28,6 @@ class DBDirectiveViewController: UIViewController {
         questionLabel?.font = UIFont(name: "Avenir-Medium", size: 40)
         
         // Mark: - Show Design Elements
-//        showQuestionLabel()
         showUsersAgeLabel()
         showDatePicker()
         
@@ -43,10 +42,7 @@ class DBDirectiveViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
-
-    
     func showUsersAgeLabel() {
         var age: Double = birthdayDatePicker.date.timeIntervalSinceNow / 365 / 60 / 60 / 24
         usersAgeLabel?.text = String(format: "I am \(Int(floor(age/(-1)))) years old")
