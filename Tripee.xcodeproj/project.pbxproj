@@ -14,6 +14,7 @@
 		A5E48E7B1A6A145100F09863 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5E48E7A1A6A145100F09863 /* Images.xcassets */; };
 		A5E48E7E1A6A145100F09863 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5E48E7C1A6A145100F09863 /* LaunchScreen.xib */; };
 		A5E48E8A1A6A145100F09863 /* TripeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E48E891A6A145100F09863 /* TripeeTests.swift */; };
+		DCF323381A6A210D0069DF2E /* TripeeAPIUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF323371A6A210D0069DF2E /* TripeeAPIUtilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		A5E48E831A6A145100F09863 /* TripeeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TripeeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5E48E881A6A145100F09863 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5E48E891A6A145100F09863 /* TripeeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripeeTests.swift; sourceTree = "<group>"; };
+		DCF323371A6A210D0069DF2E /* TripeeAPIUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripeeAPIUtilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			children = (
 				A5E48E701A6A145100F09863 /* AppDelegate.swift */,
 				A5E48E751A6A145100F09863 /* ViewController.swift */,
+				DCF323371A6A210D0069DF2E /* TripeeAPIUtilities.swift */,
 				A5E48E771A6A145100F09863 /* Main.storyboard */,
 				A5E48E7A1A6A145100F09863 /* Images.xcassets */,
 				A5E48E7C1A6A145100F09863 /* LaunchScreen.xib */,
@@ -217,6 +220,7 @@
 			files = (
 				A5E48E761A6A145100F09863 /* ViewController.swift in Sources */,
 				A5E48E741A6A145100F09863 /* Tripee.xcdatamodeld in Sources */,
+				DCF323381A6A210D0069DF2E /* TripeeAPIUtilities.swift in Sources */,
 				A5E48E711A6A145100F09863 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +413,7 @@
 				A5E48E8F1A6A145100F09863 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A5E48E901A6A145100F09863 /* Build configuration list for PBXNativeTarget "TripeeTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				A5E48E921A6A145100F09863 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
