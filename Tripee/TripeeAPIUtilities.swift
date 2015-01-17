@@ -14,5 +14,4 @@ class TripeeAPIUtilities: NSObject {
     // Get url
     
     
-    
 }
