@@ -9,17 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
-    private let googlePlacesAPIKey: String = "AIzaSyDcJfTNnahsbMXH2gjkj9KIqw4GqzD01_U"
-    private let baseURL  = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=500&types=food&name=cruise&key="
     
-    lazy var data = NSMutableData()
+    // Define Google places URL
+    private let googlePlacesAPIKey: String = "AIzaSyDcJfTNnahsbMXH2gjkj9KIqw4GqzD01_U"
+    private let googlePlacesBaseURL  = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=500&types=food&name=cruise&key="
+    
+    var data = NSMutableData()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
-        // Get url
-        let taskURL = NSURL(string: baseURL + googlePlacesAPIKey)
+        // Get Google places
+        let taskURL = NSURL(string: googlePlacesBaseURL + googlePlacesAPIKey)
         var request: NSURLRequest = NSURLRequest(URL: taskURL!)
         var connection: NSURLConnection = NSURLConnection(request: request, delegate: self, startImmediately: false)!
         connection.start()
@@ -32,9 +33,13 @@ class ViewController: UIViewController {
     
     func connectionDidFinishLoading(connection: NSURLConnection!) {
         var err: NSError
-        // throwing an error on the line below (can't figure out where the error message is)
         var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
-        println(jsonResult)
+        // Get all of the places that the query returned
+        let places = jsonResult["results"]! as [[String: AnyObject]]
+        for place in places {
+            let name = place["name"]! as String
+            println(name)
+        }
         
     }
 
