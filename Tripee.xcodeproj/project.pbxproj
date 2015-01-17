@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E01AFDA1A6A9CB300A25286 /* DisplayEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E01AFD91A6A9CB300A25286 /* DisplayEventViewController.swift */; };
 		A5D46D861A6A7B7800AC23C1 /* DBRecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D46D851A6A7B7800AC23C1 /* DBRecipesViewController.swift */; };
 		A5E48E711A6A145100F09863 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E48E701A6A145100F09863 /* AppDelegate.swift */; };
 		A5E48E741A6A145100F09863 /* Tripee.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A5E48E721A6A145100F09863 /* Tripee.xcdatamodeld */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E01AFD91A6A9CB300A25286 /* DisplayEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayEventViewController.swift; sourceTree = "<group>"; };
 		A5D46D851A6A7B7800AC23C1 /* DBRecipesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBRecipesViewController.swift; sourceTree = "<group>"; };
 		A5E48E6B1A6A145100F09863 /* Tripee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tripee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5E48E6F1A6A145100F09863 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				DCF323371A6A210D0069DF2E /* TripeeAPIUtilities.swift */,
 				A5E48E961A6A48F200F09863 /* Views */,
 				A5E48E931A6A432900F09863 /* Controllers */,
+				4E01AFD91A6A9CB300A25286 /* DisplayEventViewController.swift */,
 				A5E48E771A6A145100F09863 /* Main.storyboard */,
 				A5E48E7A1A6A145100F09863 /* Images.xcassets */,
 				A5E48E7C1A6A145100F09863 /* LaunchScreen.xib */,
@@ -243,12 +246,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E01AFDA1A6A9CB300A25286 /* DisplayEventViewController.swift in Sources */,
 				A5E48E981A6A490F00F09863 /* DBDirectiveView.swift in Sources */,
 				A5D46D861A6A7B7800AC23C1 /* DBRecipesViewController.swift in Sources */,
 				A5E48E761A6A145100F09863 /* RootViewController.swift in Sources */,
 				A5E48E741A6A145100F09863 /* Tripee.xcdatamodeld in Sources */,
 				DCF323381A6A210D0069DF2E /* TripeeAPIUtilities.swift in Sources */,
-				4E01AFD61A6A45D800A25286 /* DisplayEventsViewController.swift in Sources */,
 				A5E48E711A6A145100F09863 /* AppDelegate.swift in Sources */,
 				A5E48E951A6A433800F09863 /* DBDirectiveViewController.swift in Sources */,
 			);

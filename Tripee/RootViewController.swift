@@ -23,8 +23,8 @@ class ViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let theDestination = (segue.destinationViewController as DisplayEventsViewController)
-        theDestination.address = self.address
+        //let theDestination = (segue.destinationViewController as DispalyEventViewController)
+        //theDestination.address = self.address
      }
     
     override func didReceiveMemoryWarning() {

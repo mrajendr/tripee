@@ -10,6 +10,11 @@ import UIKit
 
 class DBRecipesViewController: UIViewController {
 
+    
+    @IBOutlet weak var locationTxtField: UITextField!
+    
+    var results = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,8 +22,17 @@ class DBRecipesViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         
-        
-        
+    }
+    
+    @IBAction func locationBtn(sender: AnyObject) {
+        var location = self.locationTxtField.text
+        let dataModel = DispalyEventViewController()
+        dataModel.getSchduleParameters(location)
+    }
+    
+    func displayResults() {
+        println(self.results)
+        // put each element in arry in a dictionary and then display name and icon of restaurents
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
@@ -30,7 +44,6 @@ class DBRecipesViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 
