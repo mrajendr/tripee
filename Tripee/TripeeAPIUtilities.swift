@@ -8,11 +8,7 @@
 
 import Foundation
 
-
 class TripeeAPIUtilities: NSObject {
-    
-    // Get url
-    
     
     
 }
