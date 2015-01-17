@@ -13,7 +13,7 @@ class DBDirectiveViewController: UIViewController {
     @IBOutlet var questionLabel: UILabel!
     @IBOutlet var usersAgeLabel: UILabel!
     @IBOutlet var birthdayDatePicker: UIDatePicker!
-    var age: Int?
+//    var age: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,13 +22,8 @@ class DBDirectiveViewController: UIViewController {
         
         // Mark: - Show Design Elements
         showQuestionLabel()
-//        showCard()
         showUsersAgeLabel()
         showDatePicker()
-        
-        
-      
-        
         
         // Do any additional setup after loading the view.
     }
@@ -52,45 +47,40 @@ class DBDirectiveViewController: UIViewController {
         questionLabel?.font = UIFont(name: "Avenir-Medium", size: 40)
     }
     
-//    func showCard() {
-//        let directiveView = DBDirectiveView()
-//        directiveView.frame = CGRectMake(24.5, 220, 321.5, 222)
-//        view.addSubview(directiveView)
-//    }
-    
     func showUsersAgeLabel() {
         
-        var dateFromTimeInterval = NSDate(timeIntervalSinceReferenceDate: birthdayDatePicker.date)
-        age = NSDate.dateByAddingTimeInterval(dateFromTimeInterval)
-        usersAgeLabel?.text = String(format: "I am \(age) years old")
+        
+        var age: Double = birthdayDatePicker.date.timeIntervalSinceNow / 365 / 60 / 60 / 24
+        
+//        println(Int(floor(age/(-1))))
+//        var dateFromTimeInterval = NSDate(timeIntervalSinceReferenceDate: birthdayDatePicker.date)
+//        age = NSDate.dateByAddingTimeInterval(dateFromTimeInterval)
+        usersAgeLabel?.text = String(format: "I am \(Int(floor(age/(-1)))) years old")
         usersAgeLabel?.textAlignment = .Center
         usersAgeLabel?.textColor = .whiteColor()
         usersAgeLabel?.font = UIFont(name: "Avenir-Medium", size: 14)
+        
+//        print(birthdayDatePicker.date.timeIntervalSinceNow)
+        
+        
     }
     
     func showDatePicker() {
         
         birthdayDatePicker?.datePickerMode = .Date
-        birthdayDatePicker?.tintColor = .whiteColor()
         birthdayDatePicker?.addTarget(self, action: Selector("activateDatePicker"), forControlEvents: UIControlEvents.ValueChanged)
+    
     }
     
     func activateDatePicker() {
         
         var dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "MM dd YYYY"
-        println(dateFormatter.stringFromDate(birthdayDatePicker.date))
+//        println(dateFormatter.stringFromDate(birthdayDatePicker.date))
+        
+        
+        
+        self.showUsersAgeLabel()
         
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

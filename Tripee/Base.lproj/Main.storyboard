@@ -45,8 +45,8 @@
                                 <date key="minimumDate" timeIntervalSinceReferenceDate="-2240571600">
                                     <!--1930-01-01 11:00:00 +0000-->
                                 </date>
-                                <date key="maximumDate" timeIntervalSinceReferenceDate="441716400">
-                                    <!--2014-12-31 11:00:00 +0000-->
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="157719600">
+                                    <!--2005-12-31 11:00:00 +0000-->
                                 </date>
                             </datePicker>
                         </subviews>
