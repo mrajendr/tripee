@@ -16,5 +16,4 @@ class TripeeAPIUtilities: NSObject {
     
     var data = NSMutableData()
     
-    
 }
