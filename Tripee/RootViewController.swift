@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let theDestination = (segue.destinationViewController as DispalyEventsViewController)
+        let theDestination = (segue.destinationViewController as DisplayEventsViewController)
         theDestination.address = self.address
      }
     

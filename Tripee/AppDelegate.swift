@@ -14,9 +14,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    /*
+    
+    if ([[NSUserDefaults standardUserDefaults]boolForKey:@"IntroHasBeenShown"]){
+    if (self.api.user.loggedIn) {
+    self.window.rootViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]]instantiateInitialViewController];
+    } else {
+    self.window.rootViewController = [[MODecisionViewController alloc] init];
+    }
+    } else {
+    [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"IntroHasBeenShown"];
+    self.window.rootViewController = [[EDPagingViewController alloc] init];
+    }
+    
+    */
+    
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+//
+//        if NSUserDefaults.standardUserDefaults().boolForKey("IntroHasBeenShown") {
+//            if (NSUserDefaults.standardUserDefaults().setBool(false, forKey: "IntroHasBeenShown")) {
+//                
+//            }
+//        }
+//        
         return true
     }
 

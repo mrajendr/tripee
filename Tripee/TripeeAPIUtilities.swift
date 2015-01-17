@@ -8,10 +8,12 @@
 
 import Foundation
 
-
 class TripeeAPIUtilities: NSObject {
     
-    // Get url
+    // Define Google places URL
+    let googlePlacesAPIKey = "AIzaSyDcJfTNnahsbMXH2gjkj9KIqw4GqzD01_U"
+    let googlePlacesBaseURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=500&types=food&name=cruise&key="
     
+    var data = NSMutableData()
     
 }
