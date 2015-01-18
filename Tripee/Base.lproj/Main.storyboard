@@ -22,6 +22,24 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="222" id="Gb0-lQ-hhE"/>
                                 </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ot9-eI-Rjm">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Mn5-2C-sU6"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="continue-button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="uz4-gF-Ani" kind="show" id="eca-pP-QcT"/>
+                                </connections>
+                            </button>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="age-rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="boQ-Cy-NnP">
+                                <rect key="frame" x="27" y="220" width="322" height="222"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="222" id="U4U-WC-0tI"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93G-yj-qCv">
                                 <rect key="frame" x="44" y="234" width="293" height="21"/>
@@ -83,6 +101,22 @@
                             <constraint firstItem="boQ-Cy-NnP" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="11" id="rWi-K2-2uN"/>
                             <constraint firstItem="93G-yj-qCv" firstAttribute="centerX" secondItem="dKr-Qb-DFV" secondAttribute="centerX" id="smV-J0-8Qk"/>
                             <constraint firstItem="Yey-52-FH6" firstAttribute="top" secondItem="93G-yj-qCv" secondAttribute="bottom" constant="17" id="wb6-nE-PpX"/>
+                            <!--Tech branch constraints-->
+                            <constraint firstItem="dKr-Qb-DFV" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="39" id="1FF-dN-sKL"/>
+                            <constraint firstItem="ot9-eI-Rjm" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="1Se-Bc-SZc"/>
+                            <constraint firstItem="boQ-Cy-NnP" firstAttribute="top" secondItem="dKr-Qb-DFV" secondAttribute="bottom" constant="39" id="2yK-Z5-fE9"/>
+                            <constraint firstItem="dKr-Qb-DFV" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="69" id="35L-lK-de1"/>
+                            <constraint firstItem="Yey-52-FH6" firstAttribute="top" secondItem="93G-yj-qCv" secondAttribute="bottom" constant="17" id="ENJ-yk-FuW"/>
+                            <constraint firstItem="ot9-eI-Rjm" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="UvI-Qh-1p0"/>
+                            <constraint firstItem="Yey-52-FH6" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="34" id="W5Z-EO-sVC"/>
+                            <constraint firstItem="Yey-52-FH6" firstAttribute="centerX" secondItem="ot9-eI-Rjm" secondAttribute="centerX" id="Z8O-es-CWj"/>
+                            <constraint firstItem="93G-yj-qCv" firstAttribute="top" secondItem="dKr-Qb-DFV" secondAttribute="bottom" constant="53" id="c3s-g5-hWH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="boQ-Cy-NnP" secondAttribute="trailing" constant="10" id="dTf-wd-jdu"/>
+                            <constraint firstItem="boQ-Cy-NnP" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="11" id="gm5-A7-FKp"/>
+                            <constraint firstItem="93G-yj-qCv" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="28" id="itZ-KZ-iSb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="93G-yj-qCv" secondAttribute="trailing" constant="22" id="p2K-gK-Crr"/>
+                            <constraint firstItem="dKr-Qb-DFV" firstAttribute="centerX" secondItem="93G-yj-qCv" secondAttribute="centerX" id="tvx-fB-6UB"/>
+                            <constraint firstAttribute="trailing" secondItem="ot9-eI-Rjm" secondAttribute="trailing" id="z8P-HK-FcM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tf0-cp-Nos"/>
@@ -145,6 +179,7 @@
                                 <rect key="frame" x="38" y="240" width="46" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="w7q-3X-9Bv"/>
+
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -165,6 +200,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="127" id="Pvv-qH-mHO"/>
                                     <constraint firstAttribute="height" constant="21" id="XhL-DB-w6i"/>
+
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>

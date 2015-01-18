@@ -9,13 +9,16 @@
 import UIKit
 
 class DBRecipesViewController: UIViewController {
-
+    @IBOutlet weak var locationTxtField: UITextField!
+    
+    var results = []
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBarHidden = true
         
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +30,17 @@ class DBRecipesViewController: UIViewController {
         
     }
     
+    @IBAction func locationBtn(sender: AnyObject) {
+        var location = self.locationTxtField.text
+        let dataModel = DispalyEventViewController()
+        dataModel.getSchduleParameters(location)
+    }
+    
+    func displayResults() {
+        println(self.results)
+        // put each element in arry in a dictionary and then display name and icon of restaurents
+    }
+    
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent
     }
@@ -36,7 +50,6 @@ class DBRecipesViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 

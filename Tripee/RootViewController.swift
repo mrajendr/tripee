@@ -22,7 +22,10 @@ class ViewController: UIViewController {
         performSegueWithIdentifier("GoToMap", sender: self)
     }
     
-
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        //let theDestination = (segue.destinationViewController as DispalyEventViewController)
+        //theDestination.address = self.address
+     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

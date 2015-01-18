@@ -36,10 +36,6 @@ class DBSearchViewController: UITableViewController, UITableViewDataSource, UITa
         // Do any additional setup after loading the view.
     }
     
-    func filterContentForSearchText(searchText: String) {
-        self.filteredPlaces = self.places.filter(<#includeElement: (T) -> Bool##(T) -> Bool#>)
-    }
-    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         println(places.count)
         return places.count
