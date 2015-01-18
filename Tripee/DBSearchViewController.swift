@@ -8,28 +8,41 @@
 
 import UIKit
 
-class DBSearchViewController: UITableViewController {
+class DBSearchViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
 
     @IBOutlet var searchBarTop: UISearchBar!
+    var places = [
+        "New York",
+        "San Francisco",
+        "Los Angeles",
+        "Boston",
+        "Miami",
+        "Vancouver"
+    ]
+    var filteredPlaces = []
+    lazy var searchBar:UISearchBar = UISearchBar(frame: CGRectMake(0, 0, 200, 20))
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.navigationController?.navigationBarHidden = false
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 0.062, green: 0.619, blue: 0.341, alpha: 1)
         
-        self.navigationItem.titleView = self.searchBarTop
-        
-//        let searchBarItem = UIBarButtonItem(customView: searchBarTop)
-//        navigationItem.rightBarButtonItem = searchBarItem;
-
-        
-//        self.navigationItem.titleView = self.searchBarTop;
-//        To put searchBar to the left/right side of navigationBar:
-//        
-//        UIBarButtonItem *searchBarItem = [[UIBarButtonItem alloc] initWithCustomView:searchBar];
-//        self.navigationItem.rightBarButtonItem = searchBarItem;
+        searchBar.placeholder = "Where are you going?"
+        var leftNavBarButton = UIBarButtonItem(customView:searchBar)
+        self.navigationItem.leftBarButtonItem = leftNavBarButton
         
         // Do any additional setup after loading the view.
+    }
+    
+    func filterContentForSearchText(searchText: String) {
+        self.filteredPlaces = self.places.filter(<#includeElement: (T) -> Bool##(T) -> Bool#>)
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        println(places.count)
+        return places.count
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -38,6 +51,23 @@ class DBSearchViewController: UITableViewController {
         
     }
     
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        var cell = tableView.dequeueReusableCellWithIdentifier("cell") as? UITableViewCell
+        
+        if cell == nil {
+            cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "CELL")
+        }
+    
+        cell?.selectionStyle = .None
+        
+        return cell!
+      
+    }
+    
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        cell.textLabel?.text = places[indexPath.row]
+    }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent

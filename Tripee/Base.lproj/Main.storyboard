@@ -220,10 +220,31 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="kEq-lI-nbU" kind="show" identifier="GoToScheduleView" id="Mca-zt-uEn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v88-Gl-h9r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1947.5" y="414.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fOT-Uz-pqe">
+            <objects>
+                <viewController id="kEq-lI-nbU" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vTX-hd-aBb"/>
+                        <viewControllerLayoutGuide type="bottom" id="MOi-dT-mRJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Enf-Tf-Zss">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XO6-ch-uAF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2853.75" y="786.375"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="nnT-Uu-acc">
@@ -249,10 +270,13 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tableView" destination="ZgM-5p-YwN" id="lwg-J4-pbB"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z2a-Pr-6ht" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2452.5" y="414.5"/>
+            <point key="canvasLocation" x="2853.75" y="157.875"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bjj-mF-QSc">
