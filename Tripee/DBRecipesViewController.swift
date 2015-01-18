@@ -16,22 +16,20 @@ class DBRecipesViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     // Set eventTypePickerViews data
     let pickerData = ["amusement_park","art_gallery","bar","cafe","casino","clothing_store","food","gym","movie_theater","museum","night_club","park","restaurant","shopping_mall","spa","store","subway_station","train_station","university","zoo"]
-    
+    let partnerData = ["friends", "family"];
     var results = []
     var selectedRow = 0
     var selectedCountry = ""
+    var count = 0
+    //var event = [AnyObject]()
+    var event: [AnyObject] = []
     
     override func viewWillAppear(animated: Bool) {
        
         super.viewWillAppear(animated)
         self.navigationController?.navigationBarHidden = true
-        //self.countryLbl!.text = self.selectedCountry
-        //println("inde will appear")
+        self.count = 0
     }
-    
-//    @IBAction func dismissedView(segue: UIStoryboardSegue) {
-//        
-//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,18 +45,17 @@ class DBRecipesViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     
     @IBAction func makeAPIRequestBtn(sender: AnyObject) {
-        var location = "toronto"//self.countryLbl!.text
+        var location = self.countryLbl!.text
         var type = self.pickerView(eventTypePickerView, titleForRow: self.selectedRow, forComponent: 0)
         println(type)
         let dataModel = DispalyEventViewController()
         dataModel.getSchduleParameters(location, type: type)
+        if  (self.count == 2){
+            self.performSegueWithIdentifier("GoToScheduleView", sender: self)
+        }else {
+            self.count++
+        }
     }
-    
-//    func displayCountrySelected(country: String) {
-//        // set txt feild/ btn to country selected
-//        println(country)
-//        self.goingToCountryLbl.text = country
-//    }
     
     func setLabelDisplay(country:String) {
         self.selectedCountry = country
@@ -70,7 +67,23 @@ class DBRecipesViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     
     func displayResults() {
-        println(self.results)
+        //println(self.results)
+        if (self.results.count != 0){
+            println(self.event)
+            var topEvent : AnyObject = self.results[0]
+            self.event.append(topEvent)
+            //self.event += topEvent
+            println(self.event)
+        } else {
+            self.count -= 1
+            var alert: UIAlertView? = nil
+            alert = UIAlertView(title: "No Places Found",
+                message: "There were no places found :(. Please try another.",
+                delegate: nil,
+                cancelButtonTitle: "OK")
+            alert!.show()
+        }
+        
         // put each element in arry in a dictionary and then display name and icon of restaurents
     }
     

@@ -26,7 +26,6 @@ class DispalyEventViewController: UIViewController {
         println(address)
         var geocoder = CLGeocoder()
         geocoder.geocodeAddressString(address, {(placemarks: [AnyObject]!, error: NSError!) -> Void in
-            println(placemarks)
             if error != nil {
                 println("Geocode failed with error: \(error.localizedDescription)")
             } else if placemarks.count > 0 {
