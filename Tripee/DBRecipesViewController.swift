@@ -8,46 +8,65 @@
 
 import UIKit
 
-class DBRecipesViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class DBRecipesViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource , MyModalDelegate {
     
     @IBOutlet weak var eventTypePickerView: UIPickerView!
+
+    @IBOutlet weak var countryLbl: UILabel!
     
     // Set eventTypePickerViews data
-    let pickerData = ["amusement_park","art_gallery","bar","cafe","casino","clothing_store","food","gym","movie_theater","museum","night_club","park","restaurent","shopping_mall","spa","store","subway_station","train_station","university","zoo"]
+    let pickerData = ["amusement_park","art_gallery","bar","cafe","casino","clothing_store","food","gym","movie_theater","museum","night_club","park","restaurant","shopping_mall","spa","store","subway_station","train_station","university","zoo"]
     
     var results = []
     var selectedRow = 0
+    var selectedCountry = ""
     
     override func viewWillAppear(animated: Bool) {
+       
         super.viewWillAppear(animated)
         self.navigationController?.navigationBarHidden = true
-        
+        //self.countryLbl!.text = self.selectedCountry
+        //println("inde will appear")
     }
+    
+//    @IBAction func dismissedView(segue: UIStoryboardSegue) {
+//        
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         eventTypePickerView.dataSource = self
         eventTypePickerView.delegate = self
         view.backgroundColor = UIColor(red: 0.086, green: 0.047, blue: 0.050, alpha: 1)
-        self.navigationController?.navigationBarHidden = true
-        
-        // Do any additional setup after loading the view.
-        
     }
     
     @IBAction func locationBtn(sender: AnyObject) {
-        var location = "toronto"
-//        let dataModel = DispalyEventViewController()
-//        dataModel.getSchduleParameters(location)
+        let vc = DBSearchViewController()
+        vc.delegate = self
+        self.presentViewController(vc, animated: true, completion: nil)
     }
     
     @IBAction func makeAPIRequestBtn(sender: AnyObject) {
-        var location = "toronto"
+        var location = "toronto"//self.countryLbl!.text
         var type = self.pickerView(eventTypePickerView, titleForRow: self.selectedRow, forComponent: 0)
-        
+        println(type)
         let dataModel = DispalyEventViewController()
         dataModel.getSchduleParameters(location, type: type)
+    }
+    
+//    func displayCountrySelected(country: String) {
+//        // set txt feild/ btn to country selected
+//        println(country)
+//        self.goingToCountryLbl.text = country
+//    }
+    
+    func setLabelDisplay(country:String) {
+        self.selectedCountry = country
+    }
+    
+    func myModalDidFinish(controller: DBSearchViewController, country: String) {
+        self.countryLbl!.text = country
+        controller.dismissViewControllerAnimated(true, completion: nil)
     }
     
     func displayResults() {

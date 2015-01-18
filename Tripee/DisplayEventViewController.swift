@@ -26,7 +26,7 @@ class DispalyEventViewController: UIViewController {
         println(address)
         var geocoder = CLGeocoder()
         geocoder.geocodeAddressString(address, {(placemarks: [AnyObject]!, error: NSError!) -> Void in
-            
+            println(placemarks)
             if error != nil {
                 println("Geocode failed with error: \(error.localizedDescription)")
             } else if placemarks.count > 0 {
@@ -38,6 +38,7 @@ class DispalyEventViewController: UIViewController {
                 println("Lat: \(self.lat) Long: \(self.long)")
                 
                 var baseURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(self.lat),\(self.long)&radius=500&types=\(type)&key="
+                println(baseURL)
                 var urlString = baseURL + self.googlePlacesAPIKey
                 let taskURL = NSURL(string:urlString)
                 var request: NSURLRequest = NSURLRequest(URL: taskURL!)

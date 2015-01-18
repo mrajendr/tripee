@@ -8,36 +8,38 @@
 
 import UIKit
 
+protocol MyModalDelegate {
+    func myModalDidFinish(controller:DBSearchViewController, country: String)
+}
+
 class DBSearchViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
-
-    @IBOutlet var searchBarTop: UISearchBar!
-    var places = [
-        "New York",
-        "San Francisco",
-        "Los Angeles",
-        "Boston",
-        "Miami",
-        "Vancouver"
-    ]
-    var filteredPlaces = []
-    lazy var searchBar:UISearchBar = UISearchBar(frame: CGRectMake(0, 0, 200, 20))
-
     
+    var delegate:MyModalDelegate! = nil
+    
+    var places = [
+        "Boston",
+        "Los Angeles",
+        "Miami",
+        "Michigan",
+        "New York",
+        "Paris",
+        "San Francisco",
+        "Shanghai",
+        "Tokyo",
+        "Toronto",
+        "Vancouver",
+    ]
+//    var filteredPlaces = []
+//    lazy var searchBar:UISearchBar = UISearchBar(frame: CGRectMake(0, 0, 200, 20))
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationController?.navigationBarHidden = false
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 0.062, green: 0.619, blue: 0.341, alpha: 1)
-        
-        searchBar.placeholder = "Where are you going?"
-        var leftNavBarButton = UIBarButtonItem(customView:searchBar)
-        self.navigationItem.leftBarButtonItem = leftNavBarButton
-        
-        // Do any additional setup after loading the view.
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        println(places.count)
         return places.count
     }
     
@@ -49,10 +51,10 @@ class DBSearchViewController: UITableViewController, UITableViewDataSource, UITa
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        var cell = tableView.dequeueReusableCellWithIdentifier("cell") as? UITableViewCell
+        var cell = tableView.dequeueReusableCellWithIdentifier("CountryCell") as? UITableViewCell
         
         if cell == nil {
-            cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "CELL")
+            cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "CountryCell")
         }
     
         cell?.selectionStyle = .None
@@ -66,7 +68,11 @@ class DBSearchViewController: UITableViewController, UITableViewDataSource, UITa
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+        //self.sendData(places[indexPath.row])
+        let viewCont = DBRecipesViewController()
+        viewCont.setLabelDisplay(places[indexPath.row])
+        //self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+        delegate.myModalDidFinish(self, country: places[indexPath.row])
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
