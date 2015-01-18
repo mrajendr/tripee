@@ -65,6 +65,10 @@ class DBSearchViewController: UITableViewController, UITableViewDataSource, UITa
         cell.textLabel?.text = places[indexPath.row]
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
+    
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent
     }
@@ -73,6 +77,7 @@ class DBSearchViewController: UITableViewController, UITableViewDataSource, UITa
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
 
     /*

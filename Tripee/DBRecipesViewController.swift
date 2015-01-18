@@ -8,10 +8,15 @@
 
 import UIKit
 
-class DBRecipesViewController: UIViewController {
-    @IBOutlet weak var locationTxtField: UITextField!
+class DBRecipesViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    @IBOutlet weak var eventTypePickerView: UIPickerView!
+    
+    // Set eventTypePickerViews data
+    let pickerData = ["amusement_park","art_gallery","bar","cafe","casino","clothing_store","food","gym","movie_theater","museum","night_club","park","restaurent","shopping_mall","spa","store","subway_station","train_station","university","zoo"]
     
     var results = []
+    var selectedRow = 0
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -19,10 +24,11 @@ class DBRecipesViewController: UIViewController {
         
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        eventTypePickerView.dataSource = self
+        eventTypePickerView.delegate = self
         view.backgroundColor = UIColor(red: 0.086, green: 0.047, blue: 0.050, alpha: 1)
         self.navigationController?.navigationBarHidden = true
         
@@ -31,14 +37,36 @@ class DBRecipesViewController: UIViewController {
     }
     
     @IBAction func locationBtn(sender: AnyObject) {
-        var location = self.locationTxtField.text
+        var location = "toronto"
+//        let dataModel = DispalyEventViewController()
+//        dataModel.getSchduleParameters(location)
+    }
+    
+    @IBAction func makeAPIRequestBtn(sender: AnyObject) {
+        var location = "toronto"
+        var type = self.pickerView(eventTypePickerView, titleForRow: self.selectedRow, forComponent: 0)
+        
         let dataModel = DispalyEventViewController()
-        dataModel.getSchduleParameters(location)
+        dataModel.getSchduleParameters(location, type: type)
     }
     
     func displayResults() {
         println(self.results)
         // put each element in arry in a dictionary and then display name and icon of restaurents
+    }
+    
+    //MARK - Delegates and Data Source
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerData.count
+    }
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+        return pickerData[row]
+    }
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.selectedRow = row
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
