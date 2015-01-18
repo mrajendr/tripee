@@ -12,7 +12,7 @@
 		A5E48E711A6A145100F09863 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E48E701A6A145100F09863 /* AppDelegate.swift */; };
 		A5E48E741A6A145100F09863 /* Tripee.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A5E48E721A6A145100F09863 /* Tripee.xcdatamodeld */; };
 		A5E48E761A6A145100F09863 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E48E751A6A145100F09863 /* RootViewController.swift */; };
-		A5E48E791A6A145100F09863 /* Main2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5E48E771A6A145100F09863 /* Main2.storyboard */; };
+		A5E48E791A6A145100F09863 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5E48E771A6A145100F09863 /* Main.storyboard */; };
 		A5E48E7B1A6A145100F09863 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5E48E7A1A6A145100F09863 /* Images.xcassets */; };
 		A5E48E7E1A6A145100F09863 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5E48E7C1A6A145100F09863 /* LaunchScreen.xib */; };
 		A5E48E8A1A6A145100F09863 /* TripeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E48E891A6A145100F09863 /* TripeeTests.swift */; };
@@ -39,7 +39,7 @@
 		A5E48E701A6A145100F09863 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5E48E731A6A145100F09863 /* Tripee.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tripee.xcdatamodel; sourceTree = "<group>"; };
 		A5E48E751A6A145100F09863 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		A5E48E781A6A145100F09863 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main2.storyboard; sourceTree = "<group>"; };
+		A5E48E781A6A145100F09863 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A5E48E7A1A6A145100F09863 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A5E48E7D1A6A145100F09863 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		A5E48E831A6A145100F09863 /* TripeeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TripeeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,7 +95,7 @@
 				A5E48E961A6A48F200F09863 /* Views */,
 				A5E48E931A6A432900F09863 /* Controllers */,
 				4E01AFD91A6A9CB300A25286 /* DisplayEventViewController.swift */,
-				A5E48E771A6A145100F09863 /* Main2.storyboard */,
+				A5E48E771A6A145100F09863 /* Main.storyboard */,
 				A5E48E7A1A6A145100F09863 /* Images.xcassets */,
 				A5E48E7C1A6A145100F09863 /* LaunchScreen.xib */,
 				A5E48E721A6A145100F09863 /* Tripee.xcdatamodeld */,
@@ -226,7 +226,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5E48E791A6A145100F09863 /* Main2.storyboard in Resources */,
+				A5E48E791A6A145100F09863 /* Main.storyboard in Resources */,
 				A5E48E7E1A6A145100F09863 /* LaunchScreen.xib in Resources */,
 				A5E48E7B1A6A145100F09863 /* Images.xcassets in Resources */,
 			);
@@ -276,12 +276,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A5E48E771A6A145100F09863 /* Main2.storyboard */ = {
+		A5E48E771A6A145100F09863 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A5E48E781A6A145100F09863 /* Base */,
 			);
-			name = Main2.storyboard;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		A5E48E7C1A6A145100F09863 /* LaunchScreen.xib */ = {

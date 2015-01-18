@@ -60,7 +60,7 @@ class DispalyEventViewController: UIViewController {
                 self.lat = coordinate.latitude
                 self.long = coordinate.longitude
                 println("Lat: \(self.lat) Long: \(self.long)")
-                
+                var baseUrl = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(self.lat),\(self.long)&radius=500&key="
                 var urlString = self.baseURL + self.googlePlacesAPIKey
                 let taskURL = NSURL(string:urlString)
                 var request: NSURLRequest = NSURLRequest(URL: taskURL!)
