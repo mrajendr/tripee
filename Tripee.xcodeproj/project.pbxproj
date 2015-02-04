@@ -18,21 +18,10 @@
 		A5E48E791A6A145100F09863 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5E48E771A6A145100F09863 /* Main.storyboard */; };
 		A5E48E7B1A6A145100F09863 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5E48E7A1A6A145100F09863 /* Images.xcassets */; };
 		A5E48E7E1A6A145100F09863 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5E48E7C1A6A145100F09863 /* LaunchScreen.xib */; };
-		A5E48E8A1A6A145100F09863 /* TripeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E48E891A6A145100F09863 /* TripeeTests.swift */; };
 		A5E48E951A6A433800F09863 /* DBDirectiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E48E941A6A433800F09863 /* DBDirectiveViewController.swift */; };
 		A5E48E981A6A490F00F09863 /* DBDirectiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E48E971A6A490F00F09863 /* DBDirectiveView.swift */; };
 		DCF323381A6A210D0069DF2E /* TripeeAPIUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF323371A6A210D0069DF2E /* TripeeAPIUtilities.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		A5E48E841A6A145100F09863 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A5E48E631A6A145100F09863 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A5E48E6A1A6A145100F09863;
-			remoteInfo = Tripee;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4E01AFD91A6A9CB300A25286 /* DisplayEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayEventViewController.swift; sourceTree = "<group>"; };
@@ -48,9 +37,6 @@
 		A5E48E781A6A145100F09863 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A5E48E7A1A6A145100F09863 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A5E48E7D1A6A145100F09863 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		A5E48E831A6A145100F09863 /* TripeeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TripeeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5E48E881A6A145100F09863 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A5E48E891A6A145100F09863 /* TripeeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripeeTests.swift; sourceTree = "<group>"; };
 		A5E48E941A6A433800F09863 /* DBDirectiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBDirectiveViewController.swift; sourceTree = "<group>"; };
 		A5E48E971A6A490F00F09863 /* DBDirectiveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBDirectiveView.swift; sourceTree = "<group>"; };
 		DCF323371A6A210D0069DF2E /* TripeeAPIUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripeeAPIUtilities.swift; sourceTree = "<group>"; };
@@ -58,13 +44,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		A5E48E681A6A145100F09863 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A5E48E801A6A145100F09863 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -87,7 +66,6 @@
 			isa = PBXGroup;
 			children = (
 				A5E48E6D1A6A145100F09863 /* Tripee */,
-				A5E48E861A6A145100F09863 /* TripeeTests */,
 				A5E48E6C1A6A145100F09863 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -96,7 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				A5E48E6B1A6A145100F09863 /* Tripee.app */,
-				A5E48E831A6A145100F09863 /* TripeeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -124,23 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				A5E48E6F1A6A145100F09863 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		A5E48E861A6A145100F09863 /* TripeeTests */ = {
-			isa = PBXGroup;
-			children = (
-				A5E48E891A6A145100F09863 /* TripeeTests.swift */,
-				A5E48E871A6A145100F09863 /* Supporting Files */,
-			);
-			path = TripeeTests;
-			sourceTree = "<group>";
-		};
-		A5E48E871A6A145100F09863 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				A5E48E881A6A145100F09863 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -183,24 +143,6 @@
 			productReference = A5E48E6B1A6A145100F09863 /* Tripee.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A5E48E821A6A145100F09863 /* TripeeTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A5E48E901A6A145100F09863 /* Build configuration list for PBXNativeTarget "TripeeTests" */;
-			buildPhases = (
-				A5E48E7F1A6A145100F09863 /* Sources */,
-				A5E48E801A6A145100F09863 /* Frameworks */,
-				A5E48E811A6A145100F09863 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A5E48E851A6A145100F09863 /* PBXTargetDependency */,
-			);
-			name = TripeeTests;
-			productName = TripeeTests;
-			productReference = A5E48E831A6A145100F09863 /* TripeeTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -213,10 +155,6 @@
 					A5E48E6A1A6A145100F09863 = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = 7NE79LP6VD;
-					};
-					A5E48E821A6A145100F09863 = {
-						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = A5E48E6A1A6A145100F09863;
 					};
 				};
 			};
@@ -234,7 +172,6 @@
 			projectRoot = "";
 			targets = (
 				A5E48E6A1A6A145100F09863 /* Tripee */,
-				A5E48E821A6A145100F09863 /* TripeeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -247,13 +184,6 @@
 				A5E48E791A6A145100F09863 /* Main.storyboard in Resources */,
 				A5E48E7E1A6A145100F09863 /* LaunchScreen.xib in Resources */,
 				A5E48E7B1A6A145100F09863 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A5E48E811A6A145100F09863 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,23 +208,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A5E48E7F1A6A145100F09863 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A5E48E8A1A6A145100F09863 /* TripeeTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		A5E48E851A6A145100F09863 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A5E48E6A1A6A145100F09863 /* Tripee */;
-			targetProxy = A5E48E841A6A145100F09863 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A5E48E771A6A145100F09863 /* Main.storyboard */ = {
@@ -419,40 +333,6 @@
 			};
 			name = Release;
 		};
-		A5E48E911A6A145100F09863 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = TripeeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tripee.app/Tripee";
-			};
-			name = Debug;
-		};
-		A5E48E921A6A145100F09863 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = TripeeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tripee.app/Tripee";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -470,15 +350,6 @@
 			buildConfigurations = (
 				A5E48E8E1A6A145100F09863 /* Debug */,
 				A5E48E8F1A6A145100F09863 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A5E48E901A6A145100F09863 /* Build configuration list for PBXNativeTarget "TripeeTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A5E48E911A6A145100F09863 /* Debug */,
-				A5E48E921A6A145100F09863 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
