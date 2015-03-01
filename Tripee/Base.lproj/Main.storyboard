@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ojz-8R-H6v">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ojz-8R-H6v">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -201,7 +201,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&amp; FEELING LIKE (choose three below)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEh-N1-oxu">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="&amp; FEELING LIKE (choose three below)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEh-N1-oxu">
                                 <rect key="frame" x="38" y="295" width="127" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="E5B-p4-V1v"/>
@@ -288,15 +288,15 @@
                                 <exclude reference="acf-kA-uLX"/>
                                 <exclude reference="lnq-Ya-Y3s"/>
                                 <exclude reference="rPE-Mk-DbW"/>
+                                <exclude reference="Q9Y-Mk-6Hj"/>
+                                <exclude reference="nDn-c6-6RB"/>
+                                <exclude reference="peb-km-rHX"/>
                                 <exclude reference="3em-AW-zz2"/>
                                 <exclude reference="OoD-f8-Psn"/>
                                 <exclude reference="ntR-ib-QKI"/>
                                 <exclude reference="nun-uM-2Yx"/>
                                 <exclude reference="5Qe-gK-TfB"/>
                                 <exclude reference="9X0-pa-5bO"/>
-                                <exclude reference="Q9Y-Mk-6Hj"/>
-                                <exclude reference="nDn-c6-6RB"/>
-                                <exclude reference="peb-km-rHX"/>
                                 <exclude reference="GDG-uj-H4e"/>
                                 <exclude reference="sIv-gt-nvl"/>
                                 <exclude reference="gQt-n2-ajI"/>
@@ -320,6 +320,12 @@
                                 <include reference="lnq-Ya-Y3s"/>
                                 <exclude reference="qb7-hH-uTs"/>
                                 <include reference="rPE-Mk-DbW"/>
+                                <exclude reference="66C-EN-2jq"/>
+                                <exclude reference="I4g-uO-fGu"/>
+                                <include reference="Q9Y-Mk-6Hj"/>
+                                <include reference="nDn-c6-6RB"/>
+                                <include reference="peb-km-rHX"/>
+                                <exclude reference="uq0-h2-bpS"/>
                                 <exclude reference="0lx-MC-5hs"/>
                                 <include reference="3em-AW-zz2"/>
                                 <include reference="OoD-f8-Psn"/>
@@ -333,12 +339,6 @@
                                 <exclude reference="KgU-Oe-o1W"/>
                                 <exclude reference="V2N-mj-5lS"/>
                                 <exclude reference="xU1-9C-ohA"/>
-                                <exclude reference="66C-EN-2jq"/>
-                                <exclude reference="I4g-uO-fGu"/>
-                                <include reference="Q9Y-Mk-6Hj"/>
-                                <include reference="nDn-c6-6RB"/>
-                                <include reference="peb-km-rHX"/>
-                                <exclude reference="uq0-h2-bpS"/>
                                 <exclude reference="D28-rJ-ZuT"/>
                                 <exclude reference="Dbb-eZ-KUQ"/>
                                 <include reference="GDG-uj-H4e"/>
